@@ -1,0 +1,11 @@
+D:\mywork\TealSharp\Teal.WeChat\obj\Debug\Teal.WeChat.csprojResolveAssemblyReference.cache
+D:\mywork\TealSharp\Teal.WeChat\bin\Debug\Teal.WeChat.dll
+D:\mywork\TealSharp\Teal.WeChat\bin\Debug\Teal.WeChat.pdb
+D:\mywork\TealSharp\Teal.WeChat\obj\Debug\Teal.WeChat.dll
+D:\mywork\TealSharp\Teal.WeChat\obj\Debug\Teal.WeChat.pdb
+D:\mywork\TealSharp\bin\Debug\Teal.WeChat.dll
+D:\mywork\TealSharp\bin\Debug\Teal.WeChat.pdb
+D:\mywork\TealSharp\bin\Debug\Teal.WeChat.XML
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\Teal.WeChat\obj\Debug\Teal.WeChat.csprojResolveAssemblyReference.cache
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\Teal.WeChat\obj\Debug\Teal.WeChat.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\Teal.WeChat\obj\Debug\Teal.WeChat.pdb

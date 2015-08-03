@@ -1,0 +1,16 @@
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\X_1_FirstWebAPI.dll.config
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\X_1_FirstWebAPI.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\X_1_FirstWebAPI.pdb
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\Newtonsoft.Json.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\Qiniu.4.0.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\System.Net.Http.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\System.Web.Http.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\System.Web.Http.WebHost.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\System.Net.Http.Formatting.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\Newtonsoft.Json.xml
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\System.Net.Http.xml
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\System.Web.Http.xml
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\System.Web.Http.WebHost.xml
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\bin\System.Net.Http.Formatting.xml
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\obj\Release\X_1_FirstWebAPI.dll
+Z:\Documents\百度云同步盘\CoWork\vart\XWebAPIDemo\X_1_FirstWebAPI\obj\Release\X_1_FirstWebAPI.pdb

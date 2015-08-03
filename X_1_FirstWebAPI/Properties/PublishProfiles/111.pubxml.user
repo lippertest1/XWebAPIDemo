@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\tmp</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Newtonsoft.Json.dll">
@@ -28,7 +28,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/09/2013 11:04:28</publishTime>
     </File>
     <File Include="bin/X_1_FirstWebAPI.dll">
-      <publishTime>07/27/2015 21:51:06</publishTime>
+      <publishTime>08/03/2015 12:44:56</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>07/21/2014 19:36:39</publishTime>
@@ -37,7 +37,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/26/2015 15:38:30</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/27/2015 21:51:06</publishTime>
+      <publishTime>08/03/2015 12:44:56</publishTime>
     </File>
   </ItemGroup>
 </Project>

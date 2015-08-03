@@ -72,11 +72,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ArtController.cs" />
     <Compile Include="Controller\qiniu.cs" />
+    <Compile Include="Controller\test.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Model\Art.cs" />
+    <Compile Include="Model\QiniuResp.cs" />
     <Compile Include="Model\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebAPIConfig.cs" />
@@ -104,7 +108,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>16464</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost/X_1_FirstWebAPI</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

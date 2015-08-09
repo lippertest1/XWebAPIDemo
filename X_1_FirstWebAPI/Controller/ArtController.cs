@@ -159,7 +159,7 @@ SELECT [artId]
             string[] SpMap666 = new string[] { "666", "6666", "66666" };
             string SpMapScale = "";
             
-            int red = 10; int black = 1;
+            int red = 1; int black = 9;
 
             Random ran = new Random();
             //这里随机数是下整 [)

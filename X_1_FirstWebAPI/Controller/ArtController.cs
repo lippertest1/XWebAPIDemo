@@ -10,6 +10,7 @@ using System.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Converters;
+using System.Configuration;
 
 namespace X_1_FirstWebAPI.Controller
 {
@@ -18,11 +19,7 @@ namespace X_1_FirstWebAPI.Controller
         SqlConnection conn;
         public ArtController() {
 
-            string strCon = @"
-Data Source=rdsd953u8w80j3b14qv2public.sqlserver.rds.aliyuncs.com,3433;
-Initial Catalog=vart_campaign_db;
-user id=campaign_user;
-password=voice_club;";
+            string strCon = ConfigurationManager.ConnectionStrings["LogDBConn"].ToString();;
             conn = new SqlConnection(strCon);
             conn.Open();
         }

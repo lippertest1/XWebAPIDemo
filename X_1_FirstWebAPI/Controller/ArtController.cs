@@ -183,7 +183,7 @@ SELECT [artId]
                             art.score = SpMap666[ran.Next(3)];
                             break;
                         default:
-                            art.score = SpMapScale.Split('|')[2];
+                            art.score = SpMapScale.Split('|')[1];
                             break;
                     }
                     art.scoreComment = SpMapScale.Split('|')[2];

@@ -15,9 +15,17 @@ namespace X_1_FirstWebAPI.Model
         public int borderId { get; set; }
         public string signKey { get; set; }
         public string uploadDate { get; set; }
-        public int score { get; set; }
+        public string score { get; set; }
+        public string scoreComment { get; set; }
         public string commentIdList { get; set; }
         public string dialogIdList { get; set; }
 
+    }
+
+    public class scoreCommentList
+    {
+        public int min { get; set; }
+        public int max { get; set; }
+        public string scoreComment { get; set; }
     }
 }

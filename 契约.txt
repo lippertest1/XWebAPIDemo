@@ -1,0 +1,91 @@
+DB
+artList
+{
+	artId			//唯一标识
+	artName			//名字
+	openid			//微信openid
+	picKey			//作品照片七牛key
+	css				//css
+	borderId		//borderId
+	signKey			//签名照片七牛key
+	uploadDate		//上传时间
+	score			//随机分数
+	commentIdList	//随机评语
+}
+
+CREATE TABLE [dbo].[ArtList](
+	[artId] [nvarchar](50) PRIMARY KEY ,
+	[artName] [nvarchar](50) NULL,
+	[openId] [nvarchar](50) NULL,
+	[picKey] [nvarchar](50) NULL,
+	[css] [nvarchar](500) NULL,
+	[borderId] [numeric](18, 0) NULL,
+	[signKey] [nvarchar](50) NULL,
+	[uploadDate] [nvarchar](50) NULL,
+	[score] [nvarchar](50) NULL,
+	[scoreComment] [nvarchar](50) NULL,
+	[commentIdList] [nvarchar](100) NULL,
+	[dialogIdList] [nvarchar](100) NULL
+) ON [PRIMARY]
+INSERT INTO [vart_campaign_db].[dbo].[ArtList]
+([artId],[artName],[openId],[picKey],[css],[borderId],[signKey],[uploadDate],[score],[scoreComment],[commentIdList],[dialogIdList])
+VALUES
+(1,1,1,1,1,1,1,1,1,'ha1ha1',1,1)
+
+INSERT INTO [vart_campaign_db].[dbo].[ArtList]
+([artId],[artName],[openId],[picKey],[css],[borderId],[signKey],[uploadDate],[score],[scoreComment],[commentIdList],[dialogIdList])
+VALUES
+(2,2,2,2,2,2,2,2,2,'ha2ha2',2,2)
+
+INSERT INTO [vart_campaign_db].[dbo].[ArtList]
+([artId],[artName],[openId],[picKey],[css],[borderId],[signKey],[uploadDate],[score],[scoreComment],[commentIdList],[dialogIdList])
+VALUES
+(3,3,3,3,3,3,3,3,3,'ha3ha3',3,3)
+
+INSERT INTO [vart_campaign_db].[dbo].[ArtList]
+([artId],[artName],[openId],[picKey],[css],[borderId],[signKey],[uploadDate],[score],[scoreComment],[commentIdList],[dialogIdList])
+VALUES
+('ECDB430C-EFD5-45C3-943B-4183AED0684D','夜空中最亮的miki','open',
+'o_19rqqqof4k7gsga1kkf1u9u137v9.jpg','-webkit-transform-origin: 50% 50%; position: absolute; -webkit-transform: rotate(-2.204163374501829rad) scale3d(1.0000630663566898, 1.0000630663566898, 1) translate3d(-0.007685229417479355px, -0.005904160392249704px, 0px);',
+2,'Fl7AFKSx6qhub9kf5cLDatJ-SRRY','1438640996324','8886','拜拜咯。。。','3','4')
+
+
+
+
+
+
+
+
+getArts
+req		openid
+resp	picKey
+		borderKey
+		styleString
+		uploadDate
+		score
+		commentIdList
+putArts
+req	
+{
+	openid			//微信openid
+	picKey			//七牛key
+	borderKey		//
+	styleString		//css
+	borderId		//borderId
+	uploadDate		//上传时间
+	score			//随机分数
+	commentIdList	//随机评语
+}
+
+
+
+微信登陆
+login
+
+
+七牛token
+
+
+
+
+

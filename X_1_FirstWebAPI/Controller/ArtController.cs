@@ -128,6 +128,32 @@ SELECT [artId]
             art.commentIdList = ran.Next(0, 19).ToString();
             art.score = ran.Next(8000, 9999);
 
+            string[] ScoreMap = new string[] { "", "" };
+            Dictionary<string, string> dic = new Dictionary<string, string>
+            {
+                {"111","222"},
+                {"WWW","333"}
+            };
+
+
+
+            List<string> scoreList = new List<string>
+            {
+
+            };
+
+
+
+            int red = 1;
+            int black = 9;
+            if (ran.Next(red + black) < red)
+            {
+
+            }
+            else { 
+            
+            }
+
             string strSQL = string.Format(@"
 INSERT INTO [vart_campaign_db].[dbo].[ArtList]
     ([artId]

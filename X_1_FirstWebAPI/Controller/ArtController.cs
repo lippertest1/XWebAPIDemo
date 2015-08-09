@@ -160,7 +160,7 @@ SELECT [artId]
             string SpMapScale = "";
             string NmMapScale = "";
             
-            int red = 1; int black = 9;
+            int red = 3; int black = 7;
 
             Random ran = new Random();
             //这里随机数是下整 [)

@@ -158,6 +158,7 @@ SELECT [artId]
             string[] SpMap233 = new string[] { "233", "2333", "23333" };
             string[] SpMap666 = new string[] { "666", "6666", "66666" };
             string SpMapScale = "";
+            string NmMapScale = "";
             
             int red = 1; int black = 9;
 
@@ -187,6 +188,7 @@ SELECT [artId]
                 }
             }
             else {
+                NmMapScale = NmMap[ran.Next(NmMap.Length)];
                 int intscore = ran.Next(99999);
                 art.score = intscore.ToString();
                 for (int i = 0; i < NmMap.Length; i++)
@@ -194,7 +196,7 @@ SELECT [artId]
                     if(NmMap[i].Split('|').Length==3){
                         if (intscore <= Int32.Parse(NmMap[i].Split('|')[1]) && intscore >= Int32.Parse(NmMap[i].Split('|')[0]))
                         {
-                            art.scoreComment = SpMapScale.Split('|')[2];
+                            art.scoreComment = NmMapScale.Split('|')[2];
                         }
                     }
                 }

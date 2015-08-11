@@ -18,7 +18,7 @@ CREATE TABLE [dbo].[ArtList](
 	[artName] [nvarchar](50) NULL,
 	[openId] [nvarchar](50) NULL,
 	[picKey] [nvarchar](50) NULL,
-	[css] [nvarchar](500) NULL,
+	[css] [nvarchar](4000) NULL,
 	[borderId] [numeric](18, 0) NULL,
 	[signKey] [nvarchar](50) NULL,
 	[uploadDate] [nvarchar](50) NULL,

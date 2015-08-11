@@ -196,7 +196,7 @@ SELECT [artId]
                     if(NmMap[i].Split('|').Length==3){
                         if (intscore <= Int32.Parse(NmMap[i].Split('|')[1]) && intscore >= Int32.Parse(NmMap[i].Split('|')[0]))
                         {
-                            art.scoreComment = NmMapScale.Split('|')[2];
+                            art.scoreComment = NmMap[i].Split('|')[2];
                         }
                     }
                 }

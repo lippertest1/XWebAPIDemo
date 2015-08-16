@@ -16,13 +16,8 @@ namespace X_1_FirstWebAPI.Controller
 {
     public class ArtController : ApiController
     {
-        SqlConnection conn;
-        public ArtController() {
+        private string _connStr = ConfigurationManager.ConnectionStrings["LogDBConn"].ToString();
 
-            string strCon = ConfigurationManager.ConnectionStrings["LogDBConn"].ToString();;
-            conn = new SqlConnection(strCon);
-            conn.Open();
-        }
         // GET api/<controller>
         public Art Get()
         {
@@ -50,34 +45,32 @@ namespace X_1_FirstWebAPI.Controller
         public Art Get(string artId)
         {
             string strSQL = string.Format(@"
-SELECT [artId]
-      ,[artName]
-      ,[openId]
-      ,[picKey]
-      ,[css]
-      ,[borderId]
-      ,[signKey]
-      ,[uploadDate]
-      ,[score]
-      ,[scoreComment]
-      ,[commentIdList]
-      ,[dialogIdList]
-  FROM [vart_campaign_db].[dbo].[ArtList]
-  where artId = '{0}'
-            ", artId);
-            SqlDataAdapter command = new SqlDataAdapter(strSQL, conn);
-            //SqlCommand command = new SqlCommand(strSQL, conn); 
-            //SqlDataReader sqlread = command.ExecuteReader();
+                SELECT [artId]
+                      ,[artName]
+                      ,[openId]
+                      ,[picKey]
+                      ,[css]
+                      ,[borderId]
+                      ,[signKey]
+                      ,[uploadDate]
+                      ,[score]
+                      ,[scoreComment]
+                      ,[commentIdList]
+                      ,[dialogIdList]
+                  FROM [vart_campaign_db].[dbo].[ArtList]
+                  where artId = '{0}'", artId);
 
-            DataTable dt = new DataTable();
-            DataSet ds = new DataSet();
-            command.Fill(ds, "ArtList");
-            dt = ds.Tables["ArtList"];
 
-            //foreach(DataRow dr in dt.Rows)        
-            //{        
-            //     object value = dr["ColumnsName"];        
-            //}
+            var dt = new DataTable();
+            using (var conn = new SqlConnection(_connStr))
+            {
+                conn.Open();
+
+                var command = new SqlDataAdapter(strSQL, conn);
+                var ds = new DataSet();
+                command.Fill(ds, "ArtList");
+                dt = ds.Tables["ArtList"];
+            }
 
             var art = new Art();
 
@@ -99,7 +92,8 @@ SELECT [artId]
                     dialogIdList = dt.Rows[0]["dialogIdList"].ToString()	    //随机对话
                 };
             }
-            else {
+            else
+            {
                 art = new Art
                 {
                     artId = "0",		//唯一标识
@@ -118,11 +112,12 @@ SELECT [artId]
 
             return art;
         }
+
         [HttpPost]
         // POST: /Person/Delete/5 
-        public Art Post([FromBody]string value)//(Person obj )
+        public Art Post(Art art)//(Person obj )
         {
-            Art art = (Art)JsonConvert.DeserializeObject(value, typeof(Art));
+            //Art art = (Art)JsonConvert.DeserializeObject(value, typeof(Art));
 
             //Random ran = new Random();
             //art.commentIdList = ran.Next(0, 19).ToString();
@@ -159,7 +154,7 @@ SELECT [artId]
             string[] SpMap666 = new string[] { "666", "6666", "66666" };
             string SpMapScale = "";
             string NmMapScale = "";
-            
+
             int red = 3; int black = 7;
 
             Random ran = new Random();
@@ -187,13 +182,15 @@ SELECT [artId]
                     art.scoreComment = SpMapScale.Split('|')[2];
                 }
             }
-            else {
+            else
+            {
                 NmMapScale = NmMap[ran.Next(NmMap.Length)];
                 int intscore = ran.Next(99999);
                 art.score = intscore.ToString();
                 for (int i = 0; i < NmMap.Length; i++)
                 {
-                    if(NmMap[i].Split('|').Length==3){
+                    if (NmMap[i].Split('|').Length == 3)
+                    {
                         if (intscore <= Int32.Parse(NmMap[i].Split('|')[1]) && intscore >= Int32.Parse(NmMap[i].Split('|')[0]))
                         {
                             art.scoreComment = NmMap[i].Split('|')[2];
@@ -206,38 +203,33 @@ SELECT [artId]
 
 
             string strSQL = string.Format(@"
-INSERT INTO [vart_campaign_db].[dbo].[ArtList]
-    ([artId]
-    ,[artName]
-    ,[openId]
-    ,[picKey]
-    ,[css]
-    ,[borderId]
-    ,[signKey]
-    ,[uploadDate]
-    ,[score]
-    ,[scoreComment]
-    ,[commentIdList]
-    ,[dialogIdList])
-VALUES
-    ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}',{11})
-", art.artId, art.artName, art.openId, art.picKey, art.css,
- art.borderId, art.signKey, art.uploadDate, art.score, art.scoreComment, art.commentIdList, art.dialogIdList);
-            SqlCommand command = new SqlCommand(strSQL, conn);
-            //command.Connection.Open();
-            int count = command.ExecuteNonQuery();
+                INSERT INTO [vart_campaign_db].[dbo].[ArtList]
+                    ([artId]
+                    ,[artName]
+                    ,[openId]
+                    ,[picKey]
+                    ,[css]
+                    ,[borderId]
+                    ,[signKey]
+                    ,[uploadDate]
+                    ,[score]
+                    ,[scoreComment]
+                    ,[commentIdList]
+                    ,[dialogIdList])
+                VALUES
+                    ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}',{11})
+                ", art.artId, art.artName, art.openId, art.picKey, art.css,
+                 art.borderId, art.signKey, art.uploadDate, art.score, art.scoreComment, art.commentIdList, art.dialogIdList);
+
+            using (var conn = new SqlConnection(_connStr))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand(strSQL, conn);
+                //command.Connection.Open();
+                int count = command.ExecuteNonQuery();
+            }
+
             return art;
-        }
-
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/<controller>/5
-        public void Delete(int id)
-        {
         }
 
     }
